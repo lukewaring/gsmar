@@ -1,5 +1,11 @@
 {{#if userContext}}
   <h1 class="text-center">Hi {{userContext.userinfo.given_name}}!</h1>
+
+  {{!-- Only for MVP; for production, will have nginx handle secured, static content --}}
+  <a href="/download">Download June 2020 Financial Reports</a>
+  <br/>
+  <br/>
+  
   <div class="d-flex justify-content-center">
     <img class="rounded img-fluid" src="/static/images/greeting.jpg" />
   </div>

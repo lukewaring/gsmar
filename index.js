@@ -43,6 +43,12 @@ app.get('/logout', (req, res) => {
   }
 })
 
+// Only for MVP; for production, will have nginx handle secured, static content
+app.get('/download', function (req, res) {
+  const file = './June_2020_Financial_Reports.pdf'
+  res.download(file)
+})
+
 app.use('/', require('./routes/index'))
 
 const port = process.env.PORT || 3000
