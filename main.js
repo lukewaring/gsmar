@@ -18,6 +18,7 @@ app.use(require('express-session')({
 }))
 
 // Check .env vars
+// Cleaned cache
 const { ExpressOIDC } = require('@okta/oidc-middleware')
 const oidc = new ExpressOIDC({
   issuer: `${process.env.OKTA_ORG_URL}/oauth2/default`,
