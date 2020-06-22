@@ -43,7 +43,9 @@ app.get('/logout', (req, res) => {
   }
 })
 
-// Only for MVP; for production, will have nginx handle secured, static content
+// Only for MVP/testing; for production,
+// will have nginx handle secured, static content
+// Placeholder file
 app.get('/download', function (req, res) {
   const file = './June_2020_Financial_Reports.pdf'
   res.download(file)
